@@ -13,7 +13,7 @@ npm install css-unit-translator
 ```js
 import CSSUnitTranslator from 'css-unit-translator'
 
-let translator = New CSSUnitTranslator()
+let translator = new CSSUnitTranslator()
 
 translator.translate(10, 'rem', 'px')
 ```
