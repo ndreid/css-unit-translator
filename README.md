@@ -4,7 +4,7 @@ Translates between CSS Units
 
 ## Installation
 
-```js
+```sh
 npm install css-unit-translator
 ```
 
