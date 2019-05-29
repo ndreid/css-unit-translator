@@ -1,0 +1,25 @@
+{
+  "name": "css-unit-translator",
+  "version": "1.0.0",
+  "description": "Library to translate between CSS Units",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndreid/css-unit-translator.git"
+  },
+  "keywords": [
+    "CSS",
+    "Unit",
+    "Translator",
+    "Converter"
+  ],
+  "author": "Nathan Reid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndreid/css-unit-translator/issues"
+  },
+  "homepage": "https://github.com/ndreid/css-unit-translator#readme"
+}
