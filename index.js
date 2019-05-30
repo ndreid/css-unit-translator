@@ -226,7 +226,7 @@ export default class CSSUnitTranslator {
 
   translate(value, from, to, decimals) {
     if (from === to)
-      return value
+      return value + to
 
     const units = `${from}-${to}`
     if (!this.formulas[units])
