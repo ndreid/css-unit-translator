@@ -15,7 +15,7 @@ import CSSUnitTranslator from 'css-unit-translator'
 
 let translator = new CSSUnitTranslator()
 
-translator.translate(10, 'rem', 'px')
+translator.translate('10rem', 'px')
 ```
 
 ## License

@@ -21,6 +21,7 @@ export default class CSSUnitTranslator {
       exPx: context.measureText('x').width,
       get vhPx() { return document.documentElement.clientHeight },
       get vwPx() { return document.documentElement.clientWidth },
+      alphaRegex: new RegExp('[a-zA-Z%]', 'g')
     }
 
     document.body.removeChild(canvas)
@@ -224,15 +225,28 @@ export default class CSSUnitTranslator {
     }
   }
 
-  translate(value, from, to, decimals) {
+  translate(value, to, decimals) {
+    if (!isNaN(value))
+      value += 'px'
+    if (typeof value !== 'string' && !(value instanceof String))
+      return undefined
+
+    let idx = value.search(this._c.alphaRegex)
+    if (idx < 1)
+      return undefined
+
+    let v = +value.slice(0, idx)
+    let from = value.slice(idx)
+    if (isNaN(v))
+      return undefined
     if (from === to)
-      return value + to
+      return v + to
 
     const units = `${from}-${to}`
     if (!this.formulas[units])
       return undefined
 
-    let result = this.formulas[units](value)
+    let result = this.formulas[units](v)
     if (isNaN(result))
       return result
     
