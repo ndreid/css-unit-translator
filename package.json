@@ -1,6 +1,6 @@
 {
   "name": "css-unit-translator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library to translate between CSS Units",
   "main": "index.js",
   "scripts": {
