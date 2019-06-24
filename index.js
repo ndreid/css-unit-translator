@@ -1,6 +1,5 @@
 export default class CSSUnitTranslator {
   constructor(elementFontSize, elementFontFamily) {
-    console.log(elementFontSize, elementFontFamily)
     let canvas = document.createElement('canvas')
     canvas.style.width = '1in'
     canvas.style.top ='-100%'
