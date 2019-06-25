@@ -224,7 +224,7 @@ export default class CSSUnitTranslator {
     }
   }
 
-  translate(value, to, decimals) {
+  translate(value, to, decimals, includeUnit = true) {
     if (!isNaN(value))
       value += 'px'
     if (typeof value !== 'string' && !(value instanceof String))
@@ -252,6 +252,6 @@ export default class CSSUnitTranslator {
     if (!isNaN(decimals))
       result = Math.round(result * 10 ** decimals) / 10 ** decimals
     
-    return result + to
+    return includeUnit ? result + to : result
   }
 }
